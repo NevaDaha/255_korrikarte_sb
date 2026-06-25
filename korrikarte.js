@@ -16,6 +16,10 @@
    
     win.$.getScript("https://shinko-to-kuma.com/scripts/mapSdk.js").done(function() {
 
+    
+    const win = typeof unsafeWindow != 'undefined' ? unsafeWindow : window;
+    var game_data = win.game_data;
+
     // ============================================================
     // FARB-KONFIGURATION
     // ============================================================
@@ -26,7 +30,6 @@
 
     // Schrift
     const COLOR_TEXT_NAME   = "#FFFFFF"; // Weiß      - Spielernamen
-    const COLOR_TEXT_SELF   = "#39FF14"; // Neongrün  - Eigener Name (OffensiveTurtle)
     const COLOR_TEXT_LABEL  = "#FFFF00"; // Gelb      - Beschriftungen (Off/Deff/Front Spieler)
     const COLOR_TEXT_OPEN   = "#AAAAAA"; // Grau      - Offene Slots
 
@@ -96,7 +99,7 @@
 
     // ----- Korri 07 | x=649 | NevaDaha -----
     MapSdk.lines.push({x1: 649.5, y1: 450.5, x2: 649.5, y2: 544.5, styling:{main: {"strokeStyle": COLOR_KORRI,"lineWidth": 2},mini: {"strokeStyle": COLOR_KORRI,"lineWidth": 2}},drawOnMini: true,drawOnMap: true,});
-    MapSdk.texts.push({x: 652, y: 507, text: "NevaDaha",color: COLOR_TEXT_SELF, font: FONT_NAME, drawOnMap: true, drawOnMini: true});
+    MapSdk.texts.push({x: 652, y: 507, text: "NevaDaha",color: COLOR_TEXT_NAME, font: FONT_NAME, drawOnMap: true, drawOnMini: true});
 
     // ----- Korri 08 | x=654 | Ratze / Beatstime -----
     MapSdk.lines.push({x1: 654.5, y1: 450.5, x2: 654.5, y2: 544.5, styling:{main: {"strokeStyle": COLOR_KORRI,"lineWidth": 2},mini: {"strokeStyle": COLOR_KORRI,"lineWidth": 2}},drawOnMini: true,drawOnMap: true,});
@@ -190,7 +193,7 @@
 
     // ----- Deff Korri 07 | x=584 | NevaDaha -----
     MapSdk.lines.push({x1: 584.5, y1: 679.5, x2: 594.5, y2: 729.5, styling:{main: {"strokeStyle": COLOR_KORRI,"lineWidth": 2},mini: {"strokeStyle": COLOR_KORRI,"lineWidth": 2}},drawOnMini: true,drawOnMap: true,});
-    MapSdk.texts.push({x: 589.5, y: 680, text: "NevaDaha",   color: COLOR_TEXT_SELF, font: FONT_NAME, drawOnMap: true, drawOnMini: true});
+    MapSdk.texts.push({x: 589.5, y: 680, text: "NevaDaha",   color: COLOR_TEXT_NAME, font: FONT_NAME, drawOnMap: true, drawOnMini: true});
 
     // ----- Deff Korri 08 | x=594 | Deluxe -----
     MapSdk.lines.push({x1: 594.5, y1: 679.5, x2: 614.5, y2: 729.5, styling:{main: {"strokeStyle": COLOR_KORRI,"lineWidth": 2},mini: {"strokeStyle": COLOR_KORRI,"lineWidth": 2}},drawOnMini: true,drawOnMap: true,});
