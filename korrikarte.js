@@ -19,7 +19,7 @@
     
     const win = typeof unsafeWindow != 'undefined' ? unsafeWindow : window;
     var game_data = win.game_data;
-    // console.log(game_data)
+    console.log(game_data)
 
     // ============================================================
     // FARB-KONFIGURATION
@@ -49,7 +49,7 @@
 
     const OFF_KORRIS = [
         { nr:  1, x: 614, names: ["democ"]                          },
-        { nr:  2, x: 619, names: ["Denno"],      noLine: true       }, // teilt Bereich mit Korri 01
+        { nr:  2, x: 619, names: ["Denno"],                         },
         { nr:  3, x: 624, names: ["Aragorn"]                        },
         { nr:  4, x: 629, names: ["Hamburg"]                        },
         { nr:  5, x: 634, names: ["Tecmec"]                         },
@@ -148,9 +148,9 @@
         const color  = k.open ? COLOR_TEXT_OPEN : COLOR_TEXT_NAME;
 
         // Linie (außer noLine)
-        //if (!k.noLine) {
-        //    addLine(xPos, OFF_Y_TOP, xPos, OFF_Y_BOTTOM, COLOR_KORRI);
-        //}
+        if (!k.noLine) {
+          addLine(xPos, OFF_Y_TOP, xPos, OFF_Y_BOTTOM, COLOR_KORRI);
+        }
 
         // Namen untereinander (je +6px Abstand)
         k.names.forEach((name, i) => {
