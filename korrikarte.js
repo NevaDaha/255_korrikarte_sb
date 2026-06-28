@@ -20,6 +20,44 @@
     const win = typeof unsafeWindow != 'undefined' ? unsafeWindow : window;
     var game_data = win.game_data;
     console.log(game_data)
+    console.log(game_data.player.name)
+    var player_name = game_data.player.name
+
+    const NAME_MAPPING = {
+      "*DE*luxe": "Deluxe",
+      "NevaDaha": "NevaDaha",
+      "tecmec": "Tecmec",
+      "Tim69": "Tim",
+      "DS-Tyrann": "Tyrann",
+      "OffensivTurtle": "Turtle",
+      "cody99": "Cody",
+      "Tohuwabohuy": "Tohuwabohuy",
+      "Dr. Schmerz": "Schmerz",
+      "Beatstime": "Beatstime",
+      "WensiHasi": "WensiHasi",
+      "robby5": "Robby",
+      "IngLuHe": "IngLuHe",
+      "Spikezzi": "Spikezzi",
+      "Zanderlord": "Zanderlord",
+      "kantega xc": "Kantega",
+      "rjb000": "Rbj",
+      "Scrumhalf": "Scrumhalf",
+      "flo1998": "Flo",
+      "Aragorn1": "Aragorn",
+      "KingSimon1": "Simon",
+      "Coltmaker": "Coltmaker",
+      "Hamburgbaaanq": "Hamburg",
+      "gangsta9": "Gangsta",
+      "leroyberlin": "LeroyBerlin",
+      "denno123": "Denno",
+      "Mandelbrot*MC": "Mandelbrot",
+      "gottverdammi": "Gottverdammi",
+      "Ratze89": "Ratze",
+      "GalenChokladkaka": "Galen",
+      "KATA-Komben-MANN": "Katamann",
+      "Shyclon": "Shyclon"
+    }
+
 
     // ============================================================
     // FARB-KONFIGURATION
@@ -59,7 +97,7 @@
         { nr:  9, x: 659, names: ["Spikezzi"]                       },
         { nr: 10, x: 664, names: ["Flo", "Galen"]                   },
         { nr: 11, x: 669, names: ["Coddy"]                          },
-        { nr: 12, x: 674, names: ["Turtle"],     self: true         },
+        { nr: 12, x: 674, names: ["Turtle"],                        },
         { nr: 13, x: 684, names: ["Tim"]                            },
         { nr: 14, x: 694, names: ["RJB"]                            },
         { nr: 15, x: 699, names: ["Robby"]                          },
@@ -154,9 +192,9 @@
 
         // Namen untereinander (je +6px Abstand)
         k.names.forEach((name, i) => {
-            const nameColor = k.self || (k.selfName === name) ? COLOR_TEXT_SELF
-                            : k.open                          ? COLOR_TEXT_OPEN
-                            :                                   COLOR_TEXT_NAME;
+            const nameColor = player_name === name ? COLOR_TEXT_SELF
+                            : k.open               ? COLOR_TEXT_OPEN
+                            :                        COLOR_TEXT_NAME;
             const yOffset = i % 2 === 0 ? 507 : 513;
             addText(k.x + 2, yOffset + Math.floor(i / 2) * 6, name, nameColor, FONT_NAME);
         });
