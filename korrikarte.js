@@ -148,9 +148,9 @@
         const color  = k.open ? COLOR_TEXT_OPEN : COLOR_TEXT_NAME;
 
         // Linie (außer noLine)
-        if (!k.noLine) {
-            addLine(xPos, OFF_Y_TOP, xPos, OFF_Y_BOTTOM, COLOR_KORRI);
-        }
+        //if (!k.noLine) {
+        //    addLine(xPos, OFF_Y_TOP, xPos, OFF_Y_BOTTOM, COLOR_KORRI);
+        //}
 
         // Namen untereinander (je +6px Abstand)
         k.names.forEach((name, i) => {
