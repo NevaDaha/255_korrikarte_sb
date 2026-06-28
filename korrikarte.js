@@ -2,7 +2,7 @@
 // @name         Korri 255
 // @version      1.0
 // @description  draw on map
-// @author       OffensiveTrutle, NevaDaha
+// @author       OffensivTurtle, NevaDaha
 // @match        https://de255.die-staemme.de/game.php?village=*screen=map*
 // @grant        none
 // ==/UserScript==
@@ -19,8 +19,6 @@
     
     const win = typeof unsafeWindow != 'undefined' ? unsafeWindow : window;
     var game_data = win.game_data;
-    console.log(game_data)
-    console.log(game_data.player.name)
     var player_name = game_data.player.name
 
     const NAME_MAPPING = {
@@ -40,7 +38,7 @@
       "Spikezzi": "Spikezzi",
       "Zanderlord": "Zanderlord",
       "kantega xc": "Kantega",
-      "rjb000": "Rbj",
+      "rjb000": "RJB",
       "Scrumhalf": "Scrumhalf",
       "flo1998": "Flo",
       "Aragorn1": "Aragorn",
@@ -86,28 +84,28 @@
     const OFF_Y_BOTTOM = 544.5;
 
     const OFF_KORRIS = [
-        { nr:  1, x: 614, names: ["democ"]                          },
-        { nr:  2, x: 619, names: ["Denno"],                         },
-        { nr:  3, x: 624, names: ["Aragorn"]                        },
-        { nr:  4, x: 629, names: ["Hamburg"]                        },
-        { nr:  5, x: 634, names: ["Tecmec"]                         },
-        { nr:  6, x: 639, names: ["Katamann"]                       },
-        { nr:  7, x: 649, names: ["NevaDaha"]                       },
-        { nr:  8, x: 654, names: ["Ratze", "Beatstime"]             },
-        { nr:  9, x: 659, names: ["Spikezzi"]                       },
-        { nr: 10, x: 664, names: ["Flo", "Galen"]                   },
-        { nr: 11, x: 669, names: ["Coddy"]                          },
-        { nr: 12, x: 674, names: ["Turtle"],                        },
-        { nr: 13, x: 684, names: ["Tim"]                            },
-        { nr: 14, x: 694, names: ["RJB"]                            },
-        { nr: 15, x: 699, names: ["Robby"]                          },
-        { nr: 16, x: 704, names: ["Dr.Schmerz"]                     },
-        { nr: 17, x: 709, names: ["Shyclon"]                        },
-        { nr: 18, x: 719, names: ["Hamburg"]                        },
-        { nr: 19, x: 724, names: ["Offen"],      open: true         },
-        { nr: 20, x: 729, names: ["Offen"],      open: true         },
-        { nr: 21, x: 734, names: ["Offen"],      open: true         },
-        { nr: 22, x: 739, names: [],             open: true         }, // nur Linie, kein Name
+        { x: 609, names: ["Offen"],      open: true         },
+        { x: 619, names: ["denno123"],                      },
+        { x: 624, names: ["Aragorn1"]                       },
+        { x: 629, names: ["Hamburgbaaanq"]                  },
+        { x: 634, names: ["tecmec"]                         },
+        { x: 639, names: ["KATA-Komben-MANN"]               },
+        { x: 649, names: ["NevaDaha"]                       },
+        { x: 654, names: ["Ratze89", "Beatstime"]           },
+        { x: 659, names: ["Spikezzi"]                       },
+        { x: 664, names: ["flo1998", "GalenChokladkaka"]    },
+        { x: 669, names: ["cody99"]                         },
+        { x: 674, names: ["OffensivTurtle"],                },
+        { x: 684, names: ["Tim69"]                          },
+        { x: 694, names: ["rjb000"]                         },
+        { x: 699, names: ["robby5"]                         },
+        { x: 704, names: ["Dr. Schmerz"]                    },
+        { x: 709, names: ["Shyclon"]                        },
+        { x: 719, names: ["Hamburgbaaanq"]                  },
+        { x: 724, names: ["Offen"],      open: true         },
+        { x: 729, names: ["Offen"],      open: true         },
+        { x: 734, names: ["Offen"],      open: true         },
+        { x: 739, names: [],             open: true         }, // nur Linie, kein Name
     ];
 
     // ----- DEFF KORRIDORE -----
@@ -183,7 +181,6 @@
     // Korridore generieren
     OFF_KORRIS.forEach(k => {
         const xPos   = k.x + 0.5;
-        const color  = k.open ? COLOR_TEXT_OPEN : COLOR_TEXT_NAME;
 
         // Linie (außer noLine)
         if (!k.noLine) {
@@ -196,7 +193,8 @@
                             : k.open               ? COLOR_TEXT_OPEN
                             :                        COLOR_TEXT_NAME;
             const yOffset = i % 2 === 0 ? 507 : 513;
-            addText(k.x + 2, yOffset + Math.floor(i / 2) * 6, name, nameColor, FONT_NAME);
+            const namePlayer = NAME_MAPPING[name]
+            addText(k.x + 2, yOffset + Math.floor(i / 2) * 6, namePlayer, nameColor, FONT_NAME);
         });
     });
 
