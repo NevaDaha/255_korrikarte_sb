@@ -86,7 +86,7 @@
 
     const OFF_KORRIS = [
         { x: 609, names: ["Offen"],      open: true         },
-        { x: 619, names: ["denno123"],                      },
+        { x: 614, names: ["denno123"],                      },
         { x: 624, names: ["Aragorn1"]                       },
         { x: 629, names: ["Hamburgbaaanq"]                  },
         { x: 634, names: ["tecmec"]                         },
@@ -195,7 +195,7 @@
                               :                        COLOR_TEXT_NAME;
             const yOffset = i % 2 === 0 ? 507 : 513;
             const playerName = NAME_MAPPING[name]
-            addText(k.x + 2, yOffset + Math.floor(i / 2) * 6, playerName, playerColor, FONT_NAME);
+            addText(k.x + 2.5, yOffset + Math.floor(i / 2) * 6, playerName, playerColor, FONT_NAME);
         });
     });
 
