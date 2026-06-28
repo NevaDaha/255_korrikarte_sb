@@ -19,7 +19,7 @@
     
     const win = typeof unsafeWindow != 'undefined' ? unsafeWindow : window;
     var game_data = win.game_data;
-    print(game_data)
+    console.log(game_data)
 
     // ============================================================
     // FARB-KONFIGURATION
