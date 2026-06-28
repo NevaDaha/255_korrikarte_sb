@@ -46,14 +46,15 @@
       "Coltmaker": "Coltmaker",
       "Hamburgbaaanq": "Hamburg",
       "gangsta9": "Gangsta",
-      "leroyberlin": "LeroyBerlin",
+      "leroyberlin": "Leroy",
       "denno123": "Denno",
       "Mandelbrot*MC": "Mandelbrot",
       "gottverdammi": "Gottverdammi",
       "Ratze89": "Ratze",
       "GalenChokladkaka": "Galen",
       "KATA-Komben-MANN": "Katamann",
-      "Shyclon": "Shyclon"
+      "Shyclon": "Shyclon",
+      "Offen": "Offen"
     }
 
 
@@ -112,21 +113,21 @@
     // Diagonale Linien: x1/y1 → x2/y2 manuell gepflegt (variabler Verlauf)
     // names: Spielernamen | labelX/labelY: Textposition
     const DEFF_KORRIS = [
-        { nr:  1, x1: 514.5, y1: 699.5, x2: 514.5, y2: 799.5, names: ["Katamann"],              labelX: 506.5, labelY: 705   },
+        { nr:  1, x1: 514.5, y1: 699.5, x2: 514.5, y2: 799.5, names: ["KATA-Komben-MANN"],              labelX: 506.5, labelY: 705   },
         { nr:  2, x1: 529.5, y1: 699.5, x2: 529.5, y2: 799.5, names: ["WensiHasi"],             labelX: 522.5, labelY: 705   },
-        { nr:  3, x1: 544.5, y1: 679.5, x2: 544.5, y2: 799.5, names: ["Kantega"],               labelX: 537.5, labelY: 705   },
+        { nr:  3, x1: 544.5, y1: 679.5, x2: 544.5, y2: 799.5, names: ["kantega xc"],               labelX: 537.5, labelY: 705   },
         { nr:  4, x1: 554.5, y1: 679.5, x2: 554.5, y2: 799.5, names: ["Scrumhalf"],             labelX: 549.5, labelY: 685   },
-        { nr:  5, x1: 564.5, y1: 679.5, x2: 564.5, y2: 799.5, names: ["Gottverdammi"],          labelX: 559.5, labelY: 680   },
-        { nr:  6, x1: 574.5, y1: 679.5, x2: 579.5, y2: 729.5, names: ["Hamburg", "Leroy"],      labelX: 569.5, labelY: 685   },
+        { nr:  5, x1: 564.5, y1: 679.5, x2: 564.5, y2: 799.5, names: ["gottverdammi"],          labelX: 559.5, labelY: 680   },
+        { nr:  6, x1: 574.5, y1: 679.5, x2: 579.5, y2: 729.5, names: ["Hamburgbaaanq", "leroyberlin"],      labelX: 569.5, labelY: 685   },
         { nr:  7, x1: 584.5, y1: 679.5, x2: 594.5, y2: 729.5, names: ["NevaDaha"],              labelX: 589.5, labelY: 680   },
-        { nr:  8, x1: 594.5, y1: 679.5, x2: 614.5, y2: 729.5, names: ["Deluxe"],                labelX: 599.5, labelY: 680   },
+        { nr:  8, x1: 594.5, y1: 679.5, x2: 614.5, y2: 729.5, names: ["*DE*luxe"],                labelX: 599.5, labelY: 680   },
         { nr:  9, x1: 604.5, y1: 679.5, x2: 634.5, y2: 729.5, names: ["IngLuHe","Tohuwabohuy"],  labelX: 612.5, labelY: 680   },
-        { nr: 10, x1: 609.5, y1: 669.5, x2: 659.5, y2: 724.5, names: ["tecmec", "KingSimon"],   labelX: 620.5, labelY: 657.5 },
-        { nr: 11, x1: 624.5, y1: 649.5, x2: 674.5, y2: 699.5, names: ["Mandelbrot","Coltmaker"],labelX: 638.5, labelY: 634.5 },
-        { nr: 12, x1: 629.5, y1: 639.5, x2: 689.5, y2: 699.5, names: ["Dr.Schmerz","Beatstime"],labelX: 643.5, labelY: 609.5 },
-        { nr: 13, x1: 639.5, y1: 619.5, x2: 704.5, y2: 684.5, names: ["Zanderlord","Gangsta"],  labelX: 658.5, labelY: 594.5 },
-        { nr: 14, x1: 654.5, y1: 604.5, x2: 719.5, y2: 669.5, names: ["Flo","Ratze","Turtle"],  labelX: 673.5, labelY: 579.5, selfName: "Turtle" },
-        { nr: 15, x1: 669.5, y1: 589.5, x2: 734.5, y2: 654.5, names: ["DSTyrann","Shyclon"],    labelX: 688.5, labelY: 564.5 },
+        { nr: 10, x1: 609.5, y1: 669.5, x2: 659.5, y2: 724.5, names: ["tecmec", "KingSimon1"],   labelX: 620.5, labelY: 657.5 },
+        { nr: 11, x1: 624.5, y1: 649.5, x2: 674.5, y2: 699.5, names: ["Mandelbrot*MC","Coltmaker"],labelX: 638.5, labelY: 634.5 },
+        { nr: 12, x1: 629.5, y1: 639.5, x2: 689.5, y2: 699.5, names: ["Dr. Schmerz","Beatstime"],labelX: 643.5, labelY: 609.5 },
+        { nr: 13, x1: 639.5, y1: 619.5, x2: 704.5, y2: 684.5, names: ["Zanderlord","gangsta9"],  labelX: 658.5, labelY: 594.5 },
+        { nr: 14, x1: 654.5, y1: 604.5, x2: 719.5, y2: 669.5, names: ["flo1998","Ratze89","OffensivTurtle"],  labelX: 673.5, labelY: 579.5, selfName: "Turtle" },
+        { nr: 15, x1: 669.5, y1: 589.5, x2: 734.5, y2: 654.5, names: ["DS-Tyrann","Shyclon"],    labelX: 688.5, labelY: 564.5 },
         { nr: 16, x1: 674.5, y1: 564.5, x2: 749.5, y2: 639.5, names: [],                        labelX: 0,     labelY: 0     },
     ];
 
@@ -189,12 +190,12 @@
 
         // Namen untereinander (je +6px Abstand)
         k.names.forEach((name, i) => {
-            const nameColor = player_name === name ? COLOR_TEXT_SELF
-                            : k.open               ? COLOR_TEXT_OPEN
-                            :                        COLOR_TEXT_NAME;
+            const playerColor = player_name === name ? COLOR_TEXT_SELF
+                              : k.open               ? COLOR_TEXT_OPEN
+                              :                        COLOR_TEXT_NAME;
             const yOffset = i % 2 === 0 ? 507 : 513;
-            const namePlayer = NAME_MAPPING[name]
-            addText(k.x + 2, yOffset + Math.floor(i / 2) * 6, namePlayer, nameColor, FONT_NAME);
+            const playerName = NAME_MAPPING[name]
+            addText(k.x + 2, yOffset + Math.floor(i / 2) * 6, playerName, playerColor, FONT_NAME);
         });
     });
 
@@ -206,8 +207,9 @@
 
         k.names.forEach((name, i) => {
             if (!k.labelX) return;
-            const nameColor = (k.selfName === name) ? COLOR_TEXT_SELF : COLOR_TEXT_NAME;
-            addText(k.labelX, k.labelY + (i * 3), name, nameColor, FONT_NAME);
+            const playerColor = player_name === name ? COLOR_TEXT_SELF : COLOR_TEXT_NAME;
+            const playerName = NAME_MAPPING[name]
+            addText(k.labelX, k.labelY + (i * 3), playerName, playerColor, FONT_NAME);
         });
     });
 
