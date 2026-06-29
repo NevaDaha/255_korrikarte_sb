@@ -85,7 +85,7 @@
     const OFF_Y_BOTTOM = 544.5;
 
     const OFF_KORRIS = [
-        { x: 609, names: ["Offen"],      open: true         },
+        { x: 609, names: ["Zanderlord"],                    },
         { x: 614, names: ["denno123"],                      },
         { x: 624, names: ["Aragorn1"]                       },
         { x: 629, names: ["Hamburgbaaanq"]                  },
