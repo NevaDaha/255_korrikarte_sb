@@ -116,11 +116,11 @@
         { x1: 514.5, y1: 699.5, x2: 514.5, y2: 799.5, names: ["KATA-Komben-MANN"],                   labelX: 506.5, labelY: 705   },
         { x1: 529.5, y1: 699.5, x2: 529.5, y2: 799.5, names: ["WensiHasi"],                          labelX: 522.5, labelY: 705   },
         { x1: 544.5, y1: 679.5, x2: 544.5, y2: 799.5, names: ["kantega xc"],                         labelX: 537.5, labelY: 705   },
-        { x1: 554.5, y1: 679.5, x2: 554.5, y2: 799.5, names: ["Scrumhalf"],                          labelX: 549.5, labelY: 685   },
-        { x1: 564.5, y1: 679.5, x2: 564.5, y2: 799.5, names: ["gottverdammi"],                       labelX: 559.5, labelY: 680   },
-        { x1: 574.5, y1: 679.5, x2: 579.5, y2: 729.5, names: ["Hamburgbaaanq"],                      labelX: 569.5, labelY: 685   },
-        { x1: 584.5, y1: 679.5, x2: 594.5, y2: 729.5, names: ["leroyberlin"],                        labelX: 579.5, labelY: 680   },
-        { x1: 594.5, y1: 679.5, x2: 614.5, y2: 729.5, names: ["NevaDaha"],                           labelX: 589.5, labelY: 680   },
+        // { x1: 554.5, y1: 679.5, x2: 554.5, y2: 799.5, names: ["Scrumhalf"],                          labelX: 549.5, labelY: 685   },
+        // { x1: 564.5, y1: 679.5, x2: 564.5, y2: 799.5, names: ["gottverdammi"],                       labelX: 559.5, labelY: 680   },
+        // { x1: 574.5, y1: 679.5, x2: 579.5, y2: 729.5, names: ["Hamburgbaaanq"],                      labelX: 569.5, labelY: 685   },
+        // { x1: 584.5, y1: 679.5, x2: 594.5, y2: 729.5, names: ["leroyberlin"],                        labelX: 579.5, labelY: 680   },
+        // { x1: 594.5, y1: 679.5, x2: 614.5, y2: 729.5, names: ["NevaDaha"],                           labelX: 589.5, labelY: 680   },
         { x1: 604.5, y1: 679.5, x2: 634.5, y2: 729.5, names: ["*DE*luxe"],                           labelX: 599.5, labelY: 680   },
         { x1: 609.5, y1: 669.5, x2: 659.5, y2: 724.5, names: ["IngLuHe","Tohuwabohuy"],              labelX: 612.5, labelY: 680   },
         { x1: 624.5, y1: 649.5, x2: 674.5, y2: 699.5, names: ["tecmec"],                             labelX: 620.5, labelY: 657.5 },
@@ -128,7 +128,7 @@
         { x1: 629.5, y1: 639.5, x2: 689.5, y2: 699.5, names: ["Mandelbrot*MC","Coltmaker"],          labelX: 638.5, labelY: 634.5 },
         { x1: 639.5, y1: 619.5, x2: 704.5, y2: 684.5, names: ["Dr. Schmerz","Beatstime"],            labelX: 643.5, labelY: 609.5 },
         { x1: 654.5, y1: 604.5, x2: 719.5, y2: 669.5, names: ["Zanderlord","gangsta9"],              labelX: 658.5, labelY: 594.5 },
-        { x1: 669.5, y1: 589.5, x2: 734.5, y2: 654.5, names: ["flo1998","Ratze89"], labelX: 673.5, labelY: 579.5 },
+        { x1: 669.5, y1: 589.5, x2: 734.5, y2: 654.5, names: ["flo1998","Ratze89"],                  labelX: 673.5, labelY: 579.5 },
         { x1: 674.5, y1: 564.5, x2: 749.5, y2: 639.5, names: ["DS-Tyrann","Shyclon"],                labelX: 688.5, labelY: 564.5  },
     ];
 
@@ -161,6 +161,10 @@
     // ----- Adelsgrenze OLY (Grün) -----
     addLine(554.5, 599.5, 609.5, 599.5, COLOR_GRENZE_OLY, 3);
     addLine(609.5, 599.5, 609.5, 494.5, COLOR_GRENZE_OLY, 3);
+    addLine(544.5, 699.5, 599.5, 699.5, COLOR_GRENZE_OLY, 3);
+    addLine(544.5, 724.5, 599.5, 699.5, COLOR_GRENZE_OLY, 3);
+    addLine(544.5, 699.5, 599.5, 724.5, COLOR_GRENZE_OLY, 3);
+    addLine(599.5, 699.5, 599.5, 799.5, COLOR_GRENZE_OLY, 3);
 
     // ============================================================
     // OFF KORRIDORE - automatisch aus OFF_KORRIS generiert
@@ -213,6 +217,13 @@
             addText(k.labelX, k.labelY + (i * 3), playerName, playerColor, FONT_NAME);
         });
     });
+
+    addLine(544.5, 699.5, 544.5, 654.5, COLOR_KORRI)
+    addLine(544.5, 654.5, 594.5, 654.5, COLOR_KORRI)
+    addLine(594.5, 654.5, 594.5, 699.5, COLOR_KORRI)
+    addText(574, 665, "leroyberlin", player_name === "leroyberlin" ? COLOR_TEXT_SELF : COLOR_TEXT_NAME, FONT_NAME);
+    addText(574, 670, "NevaDaha", player_name === "NevaDaha" ? COLOR_TEXT_SELF : COLOR_TEXT_NAME, FONT_NAME);
+    addText(574, 675, "Hamburgbaaanq", player_name === "Hamburgbaaanq" ? COLOR_TEXT_SELF : COLOR_TEXT_NAME, FONT_NAME);
 
     // ============================================================
     // RELOAD
