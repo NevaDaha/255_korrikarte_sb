@@ -82,27 +82,25 @@
     // ----- OFF KORRIDORE -----
     // y-Bereich: 450.5 (oben) → 544.5 (Separator)
     const OFF_Y_TOP    = 450.5;
-    const OFF_Y_BOTTOM = 544.5;
+    const OFF_Y_BOTTOM = 574.5;
 
     const OFF_KORRIS = [
         { x: 609, names: ["Zanderlord"],                    },
-        { x: 614, names: ["denno123"],                      },
-        { x: 624, names: ["Aragorn1"]                       },
-        { x: 629, names: ["Hamburgbaaanq"]                  },
+        { x: 614, names: ["KATA-Komben-MANN"],              },
+        { x: 624, names: ["flo1998"]                        },
         { x: 634, names: ["rjb000"]                         },
-        { x: 639, names: ["GalenChokladkaka"]               },
-        { x: 644, names: ["tecmec"]                         },
+        { x: 639, names: ["Shyclon"]                        },
         { x: 649, names: ["NevaDaha"]                       },
         { x: 654, names: ["Spikezzi"]                       },
-        { x: 664, names: ["flo1998"]                        },
+        { x: 664, names: ["Tim69"]                          },
         { x: 669, names: ["cody99"]                         },
-        { x: 674, names: ["OffensivTurtle"],                },
-        { x: 684, names: ["Tim69"]                          },
-        { x: 694, names: ["Dr. Schmerz"]                    },
-        { x: 699, names: ["robby5"]                         },
-        { x: 704, names: ["Shyclon"]                        },
-        { x: 709, names: ["KATA-Komben-MANN"]               },
-        { x: 719, names: ["Hamburgbaaanq"],                 },
+        { x: 674, names: ["robby5"],                        },
+        { x: 684, names: ["Dr. Schmerz"]                    },
+        { x: 694, names: ["Offen"],      open: true         },
+        { x: 699, names: ["Offen"],      open: true         },
+        { x: 704, names: ["Offen"],      open: true         },
+        { x: 709, names: ["Offen"],      open: true         },
+        { x: 719, names: ["Offen"],      open: true         },
         { x: 724, names: ["Offen"],      open: true         },
         { x: 729, names: ["Offen"],      open: true         },
         { x: 734, names: ["Offen"],      open: true         },
@@ -128,8 +126,9 @@
         { x1: 629.5, y1: 639.5, x2: 689.5, y2: 699.5, names: ["Mandelbrot*MC","Coltmaker"],          labelX: 638.5, labelY: 634.5 },
         { x1: 639.5, y1: 619.5, x2: 704.5, y2: 684.5, names: ["Dr. Schmerz","Beatstime"],            labelX: 643.5, labelY: 609.5 },
         { x1: 654.5, y1: 604.5, x2: 719.5, y2: 669.5, names: ["Zanderlord","gangsta9"],              labelX: 658.5, labelY: 594.5 },
-        { x1: 669.5, y1: 589.5, x2: 734.5, y2: 654.5, names: ["flo1998","Ratze89"],                  labelX: 673.5, labelY: 579.5 },
-        { x1: 674.5, y1: 564.5, x2: 749.5, y2: 639.5, names: ["DS-Tyrann","Shyclon"],                labelX: 688.5, labelY: 564.5  },
+        { x1: 669.5, y1: 589.5, x2: 734.5, y2: 654.5, names: [],                                     labelX: 673.5, labelY: 579.5 },
+        // { x1: 669.5, y1: 589.5, x2: 734.5, y2: 654.5, names: ["flo1998","Ratze89"],                  labelX: 673.5, labelY: 579.5 },
+        // { x1: 674.5, y1: 564.5, x2: 749.5, y2: 639.5, names: ["DS-Tyrann","Shyclon"],                labelX: 688.5, labelY: 564.5  },
     ];
 
     // ============================================================
@@ -166,23 +165,27 @@
     addLine(544.5, 699.5, 599.5, 724.5, COLOR_GRENZE_OLY, 3);
     addLine(599.5, 699.5, 599.5, 799.5, COLOR_GRENZE_OLY, 3);
 
+    // ----- Adelsgrenze CHI (Grün) -----
+    addLine(669.5, 589.5, 734.5, 654.5, COLOR_GRENZE_OLY, 3);
+    addLine(669.5, 589.5, 669.5, 574.5, COLOR_GRENZE_OLY, 3);
+
     // ============================================================
     // OFF KORRIDORE - automatisch aus OFF_KORRIS generiert
     // ============================================================
 
     // Separator-Linien
-    addLine(609.5, OFF_Y_BOTTOM, 799.5, OFF_Y_BOTTOM, COLOR_KORRI);
-    addLine(609.5, 554.5,        699.5, 554.5,        COLOR_KORRI);
-    addLine(699.5, 554.5,        749.5, 594.5,        COLOR_KORRI);
+    // addLine(609.5, OFF_Y_BOTTOM, 799.5, OFF_Y_BOTTOM, COLOR_KORRI);
+    // addLine(609.5, 554.5,        699.5, 554.5,        COLOR_KORRI);
+    // addLine(699.5, 554.5,        749.5, 594.5,        COLOR_KORRI);
 
     // Separator-Labels (alle 40 Einheiten wiederholt)
-    [619.5, 659.5, 699.5, 739.5].forEach(x => {
-        addText(x, 542,  "Off",           COLOR_TEXT_NAME,  FONT_LABEL);
-        addText(x, 548,  "Front Spieler", COLOR_TEXT_LABEL, FONT_LABEL);
-    });
-    [619.5, 659.5, 699.5].forEach(x => {
-        addText(x, 556, "Deff", COLOR_TEXT_NAME, FONT_LABEL);
-    });
+    // [619.5, 659.5, 699.5, 739.5].forEach(x => {
+    //     addText(x, 542,  "Off",           COLOR_TEXT_NAME,  FONT_LABEL);
+    //     addText(x, 548,  "Front Spieler", COLOR_TEXT_LABEL, FONT_LABEL);
+    // });
+    // [619.5, 659.5, 699.5].forEach(x => {
+    //     addText(x, 556, "Deff", COLOR_TEXT_NAME, FONT_LABEL);
+    // });
 
     // Korridore generieren
     OFF_KORRIS.forEach(k => {
@@ -198,7 +201,11 @@
             const playerColor = player_name === name ? COLOR_TEXT_SELF
                               : k.open               ? COLOR_TEXT_OPEN
                               :                        COLOR_TEXT_NAME;
-            const yOffset = i % 2 === 0 ? 507 : 513;
+
+            var yOffset = 543
+            if(i % 2 == 0){
+                yOffset = 537
+            }
             const playerName = NAME_MAPPING[name]
             addText(k.x + 2.5, yOffset + Math.floor(i / 2) * 6, playerName, playerColor, FONT_NAME);
         });
