@@ -168,6 +168,7 @@
     // ----- Adelsgrenze CHI (Grün) -----
     addLine(669.5, 589.5, 734.5, 654.5, COLOR_GRENZE_OLY, 3);
     addLine(669.5, 589.5, 669.5, 574.5, COLOR_GRENZE_OLY, 3);
+    addText(669, 700, "CHI", COLOR_GRENZE_OLY, FONT_LABEL);
 
     // ============================================================
     // OFF KORRIDORE - automatisch aus OFF_KORRIS generiert
